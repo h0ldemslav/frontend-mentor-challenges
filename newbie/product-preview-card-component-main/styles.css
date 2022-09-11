@@ -1,0 +1,255 @@
+/* || General styles */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    width: 90%;
+    max-width: 1440px;
+    margin: 4em auto;
+    background-color: hsl(30, 38%, 92%);
+    font: 14px 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+/* || Product preview and section styling */
+
+.product {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.product-type {
+    margin-top: 2.5em;
+    color: hsl(228, 12%, 48%);
+    font-size: 0.8em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.product-title {
+    font: 2.3em/1 'Fraunces', serif; 
+    margin-top: 0.5em;
+    width: 80%;
+}
+
+.product-desc {
+    width: 85%; 
+    color: hsl(228, 12%, 48%);
+    font-size: 0.97em;
+    line-height: 1.6;
+}
+
+.product-price {
+    margin-top: 2.5em;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.product-price li:nth-of-type(1) {
+    display: inline-block;
+    margin-right: 0.5em;
+    font: 2.5em 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+}
+
+.product-price li:nth-of-type(2) {
+    display: inline-block;
+    position: relative;
+    bottom: 0.54em;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+.product-purchase {
+    display: block;
+    width: 90%;
+    height: 3.7em;
+    padding: 1.2em;
+    border-radius: 10px;
+    margin-top: 2em;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.product-purchase:hover {
+    background-color: hsl(158, 36%, 18%);
+}
+
+.product-purchase img {
+    position: relative;
+    top: 0.24em;
+    right: 0.7em;
+}
+
+/* || Layout */
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 310px 310px;
+    margin: 0 auto;
+}
+
+.product-preview img {
+    display: block;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+}
+
+.product {
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 2.2em;
+}
+
+footer {
+    width: 100%;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+}
+
+.attribution a:nth-of-type(2) {
+    display: inline-block
+}
+
+/* || Wider than 1440px screen styles */
+
+@media (min-width: 1440px){ 
+    body {
+        max-width: none;
+        margin-top: 2em;
+    }
+
+    main {
+        grid-template-columns: 450px 450px;
+    }
+
+    .product-type {
+        font-size: 1.2em;
+    }
+
+    .product-title {
+        font-size: 3em;
+    }
+
+    .product-desc {
+        font-size: 1.4em;
+    }
+
+    .product-price li:nth-of-type(1) {
+        font-size: 3.3em;
+    }
+
+    .product-price li:nth-of-type(2) {
+        font-size: 1.3em;
+    }
+
+    .product-purchase {
+        height: 4em;
+        font-size: 1.5em;
+    }
+
+    .product-purchase img {
+        top: 0.10em;
+        width: 1em;
+    }
+
+    footer {
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+}
+
+/* || Mobile styles */
+
+@media (max-width: 500px) {
+    body {
+        margin: 2em auto 0 auto;
+        display: block;
+    }
+
+    main {
+        display: block;
+    }
+    
+    .product {
+        width: 100%;
+        padding: 0 0 1.5em 0;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+        margin: 0;
+    }
+
+    .product-preview {
+        margin: 0;
+        position: relative;
+        top: 0.24em;
+    }
+
+    .product-preview img {
+        width: 100%;
+        display: inline;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .product-type {
+        padding-top: 1.7em;
+        padding-left: 1.6em;
+        margin: 0;
+        font-size: 0.9em;
+    }
+
+    .product-title {
+        width: 100%;
+        padding-left: 0.6em;
+        margin-top: 0.4em;
+        margin-bottom: 0.4em;
+        font-size: 2.4em;
+    }
+
+    .product-desc,
+    .product-price,
+    .product-purchase {
+        padding-left: 1.6em;
+    }
+
+    .product-desc {
+        width: 91%;
+    }
+
+    .product-price {
+        margin-top: 1.2em;
+        margin-bottom: 1.2em;
+    }
+
+    .product-purchase {
+        width: 85%;
+        height: 3.45em;
+        padding: 1em 0 2.5em 0;
+        margin: 0 auto;
+    }
+
+    footer {
+        margin: 3em auto 2em auto;
+    }
+
+}
