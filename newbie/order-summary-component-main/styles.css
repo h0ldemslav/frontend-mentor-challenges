@@ -1,0 +1,184 @@
+/* General */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: hsl(225, 100%, 94%);
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    font: 1rem/1.55 "Red Hat Display", sans-serif;
+}
+
+div {
+    margin: 1.6rem auto;
+}
+
+/* Footer */
+
+.attribution { 
+    font-size: 0.8rem; 
+    text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Utilities */
+
+.full-round-border {
+    border-radius: 15px;
+}
+
+/* Order card component */
+
+.card.order {
+    padding-block-end: 1.5rem;
+    margin: 4rem 1.5rem 1rem 1.5rem;
+    background-color: white;
+    text-align: center;
+}
+
+.order-image {
+    max-width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card.order h3 {
+    margin-block-end: 1rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+.card.order p {
+    color: hsl(224, 23%, 55%);
+    padding-inline: 2rem;
+}
+
+.order-plan {
+    width: 90%;
+    padding: 1rem;
+    background-color: hsl(225, 100%, 98%);
+    background-image: url("./images/icon-music.svg");
+    background-position: 1.1rem center;
+    background-repeat: no-repeat;
+}
+
+.order-plan .order-plan-type {
+    display: inline-block;
+    width: 165px;
+    padding-inline-start: 4rem;
+    margin-inline-end: 2.5rem;
+    font-weight: 900;
+    line-height: 1.4;
+    color: hsl(223, 47%, 23%);
+}
+
+.order-plan-type .order-plan-price {
+    font-size: 0.94rem;
+    font-weight: normal;
+    color: hsl(224, 23%, 55%);
+}
+
+.order-plan a {
+    position: relative;
+    bottom: 0.6rem;
+    font-size: 0.90rem;
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+}
+
+.order-plan a:hover {
+    text-decoration: none;
+    color: hsla(245, 75%, 52%, 0.7);
+}
+
+.order-purchase,
+.order-cancel {
+    width: 90%;
+    margin-block: 0.3rem;
+    margin-inline: auto;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.order-purchase {
+    padding: 1rem;
+    border-width: 0;
+    border-color: hsl(245, 75%, 52%);
+    background-color: hsl(245, 75%, 52%);
+    box-shadow: 0px 11px 6px 5px hsl(225, 100%, 94%);
+    font-weight: 700;
+    color: white;
+}
+
+.order-purchase:hover {
+    background-color: hsla(245, 75%, 52%, 0.7);
+}
+
+.order-cancel {
+    border: 0;
+    margin-block-start: 1.2rem;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 700;
+    color: hsl(224, 23%, 55%);
+}
+
+.order-cancel:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+/* Desktop */
+
+@media (min-width: 450px) {
+    body {
+        background-image: url("./images/pattern-background-desktop.svg");
+    }
+
+    .card.order {
+        width: 450px;
+        margin: 2rem auto;
+        padding-block-end: 2.5rem;
+    }
+
+    .card.order p {
+        width: 90%;
+        padding-inline: 3rem;
+        margin-inline: auto;
+    }
+
+    .order-plan {
+        width: 80%;
+        padding: 2rem;
+    }
+
+    .order-plan .order-plan-type {
+        padding-inline-start: 0;
+    }
+
+    .order-plan a {
+        left: 1.6rem;
+    }
+
+    .order-purchase,
+    .order-cancel {
+        width: 80%;
+    }
+
+    .order-cancel {
+        margin-block-start: 1.8rem;
+    }
+}
