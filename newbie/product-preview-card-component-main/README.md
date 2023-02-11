@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub repository](https://github.com/h0ldemslav/static-websites/tree/master/newbie/product-preview-card-component-main)
-- Live Site URL: [GitHub Pages](https://h0ldemslav.github.io/static-websites/newbie/product-preview-card-component-main/)
+- Solution URL: [GitHub repository](https://github.com/h0ldemslav/frontend-mentor-challenges/tree/master/newbie/product-preview-card-component-main)
+- Live Site URL: [GitHub Pages](https://h0ldemslav.github.io/frontend-mentor-challenges/newbie/product-preview-card-component-main/)
 
 ## My process
 
