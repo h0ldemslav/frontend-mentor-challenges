@@ -1,0 +1,236 @@
+html {
+    box-sizing: border-box;
+    font: 16px/1.5 "Roboto", sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: hsl(235, 18%, 26%);
+    position: relative;
+    max-width: 1440px;
+    margin: 0 1.5em;
+}
+
+input,
+button {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: hsl(234, 29%, 20%);
+}
+
+button[type="submit"] {
+    font-weight: bold;
+    font-size: 0.8em;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(234, 29%, 20%);
+    display: block;
+    width: 100%;
+    padding: 1.1em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: hsl(4, 100%, 67%);
+}
+
+.newsletter {
+    background-color: hsl(0, 0%, 100%);
+    background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 0 top;
+    background-size: contain;
+    border-radius: 0 0 16px 16px;
+}
+
+.newsletter .form-wrapper {
+    padding: 70vw 2em 2em 1.5em;
+}
+
+.newsletter h2 {
+    margin: 0.2em 0 0.3em 0;
+}
+
+.newsletter p {
+    margin-top: 0.1em;
+    font-size: 0.9em;
+}
+
+.list-detail {
+    font-size: 0.85em;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 1.5em 0;
+}
+
+.list-detail li {
+    background-image: url("./assets/images/icon-list.svg");
+    background-repeat: no-repeat;
+    background-position: left 2px;
+    background-size: 16px;
+    padding-left: 2em;
+    margin: 0.5em 0;
+}
+
+label[for="newsletter-email"] {
+    font-size: 0.65em;
+    color: hsl(234, 29%, 20%);
+    font-weight: bold;
+    display: block;
+}
+
+.default-outline {
+    border: 1.4px solid hsl(0, 0%, 83%);
+}
+
+#newsletter-email {
+    font-size: 0.8em;
+    display: block;
+    width: 100%;
+    padding: 1.1em;
+    border-radius: 6px;
+    margin: 0.5em 0 1.5em 0;
+}
+
+#newsletter-email:focus {
+    outline: none;
+    color: hsl(234, 29%, 20%);
+    border-color: hsl(234, 29%, 20%);
+}
+
+.email-input-error {
+    color:hsl(4, 100%, 67%);
+    background-color: hsl(5, 91%, 92%);
+    border-color: hsl(4, 100%, 67%);
+}
+
+.email-input-error-message {
+    font-weight: bold;
+    color: hsl(4, 100%, 67%);
+    float: right;
+}
+
+.confirm-wrapper {
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 92%;
+    padding: 8em 1em 1em 1em;
+    border-radius: 0 0 16px 16px;
+    margin: 0 auto;
+}
+
+.confirm-wrapper h2 {
+    line-height: 1;
+    background-image: url("./assets/images/icon-success.svg");
+    background-position: 0 top;
+    background-repeat: no-repeat;
+    background-size: 55px;
+    padding-top: 2.7em;
+    margin-bottom: 0.5em;
+}
+
+.confirm-wrapper p  {
+    margin-bottom: 8em;
+}
+
+.bold {
+    font-weight: bold;
+    color: hsl(234, 29%, 20%);
+}
+
+.overlay {
+    background-color: black;
+    opacity: 0.4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+}
+
+.attribution { 
+    text-align: center; 
+    margin: 1.5em 0;
+    color: white;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 39em) {
+    body {
+        margin: 1em;
+    }
+
+    .newsletter {
+        background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+        background-position: 95% 2em;
+        background-size: 260px;
+        border-radius: 16px;
+    }
+
+    .newsletter .form-wrapper {
+        width: 55%;
+        padding: 2em 3em 2em 1.5em;
+    }
+
+    .confirm-wrapper {
+        top: 5em;
+        left: 0;
+        right: 0;
+        bottom: 8em;
+        width: 400px;
+        height: 415px;
+        padding: 1em 3em 2em 3em;
+        border-radius: 16px;
+        margin: auto;
+    }
+
+    .confirm-wrapper h2 {
+        font-size: 2.8em;
+        padding-top: 1.9em;
+    }
+
+    .confirm-wrapper p {
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+
+    .confirm-wrapper button {
+        margin-top: 2em;
+        margin-bottom: 4em;
+    }
+}
+
+@media screen and (min-width: 46.875em) {
+    body {
+        margin: 1em auto;
+    }
+
+    .newsletter {
+        background-size: 280px;
+        background-position: 95% 1.5em;
+        width: 700px;
+        padding-bottom: 2em;
+        margin: 0 auto;
+    }
+
+    .newsletter .form-wrapper {
+        padding: 3em 3em 1em 2.1em;
+    }
+
+    .confirm-wrapper {
+        height: 440px;
+    }
+}
