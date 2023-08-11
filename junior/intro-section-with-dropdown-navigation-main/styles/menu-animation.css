@@ -1,0 +1,32 @@
+.header__menu {
+    animation-name: slideleft;
+    animation-duration: 0.4s;
+}
+
+.menu__sublist {
+    animation-name: slowappear;
+    animation-duration: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+    @keyframes slideleft {
+        from {
+            width: 0;
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slowappear {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}

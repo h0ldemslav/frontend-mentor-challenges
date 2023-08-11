@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/menu-animation.css">
+  <script src="./main.js" defer></script>
+</head>
+<body class="page">
+  <header class="header header_size_s page__header">
+    <img src="./images/logo.svg" alt="Snap logo" class="header__logo">
+
+    <button class="burger-button header__burger-button">
+      <img src="./images/icon-menu.svg" alt="Menu" class="burger-button__icon">
+    </button>
+
+    <nav class="menu hidden">
+        <ul class="menu__list menu__list_gray no-bullet">
+          <li class="menu__features menu__item menu__item_hover">
+            <button class="menu__button">Features</button>
+
+            <ul class="menu__sublist no-bullet hidden">
+              <li class="menu__sublist-item">
+                <a href="#" class="menu__link menu__link_gray">Todo List</a>
+              </li>
+              <li class="menu__sublist-item">
+                <a href="#" class="menu__link menu__link_gray">Calendar</a>
+              </li>
+              <li class="menu__sublist-item">
+                <a href="#" class="menu__link menu__link_gray">Reminders</a>
+              </li>
+              <li class="menu__sublist-item">
+                <a href="#" class="menu__link menu__link_gray">Planning</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu__company menu__item menu__item_hover">
+            <button class="menu__button">Company</button>
+
+            <ul class="menu__sublist no-bullet hidden">
+              <li class="menu__sublist-item">
+                <a href="#" class="menu__link menu__link_gray">History</a>
+              </li>
+              <li class="menu__sublist-item">
+                <a href="#" class="menu__link menu__link_gray">Our Team</a>
+              </li>
+              <li class="menu__sublist-item">
+                <a href="#" class="menu__link menu__link_gray">Blog</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu__careers menu__item">
+            <a href="#" class="menu__link menu__link_gray">Careers</a>
+          </li>
+
+          <li class="menu__about menu__item">
+            <a href="#" class="menu__link menu__link_gray">About</a>
+          </li>
+        </ul>
+
+        <a href="#" class="menu__login menu__link menu__link_gray">Login</a>
+
+        <a href="#" class="menu__register menu__link menu__link_gray">Register</a>
+    </nav>
+  </header>
+
+  <main class="content page__content">
+    <img src="./images/image-hero-mobile.png" alt="" class="content__preview-image">
+
+    <section class="preview content__preview-section">
+      <h2 class="preview__title preview__title_size_b">Make remote work</h2>
+
+      <p class="preview__text preview__text_gray preview__text_size_m">
+        Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
+      </p>
+    
+      <a href="#" class="preview__link preview__link_black">Learn more</a>
+
+      <div class="logos preview__logos">
+        <a href="#" class="logos__link">
+          <img src="./images/client-databiz.svg" alt="Databiz logo" class="logos__image">
+        </a>
+        <a href="#" class="logos__link">
+          <img src="./images/client-audiophile.svg" alt="Audiophile logo" class="logos__image">
+        </a>
+        <a href="#" class="logos__link">
+          <img src="./images/client-meet.svg" alt="Meet logo" class="logos__image">
+        </a>
+        <a href="#" class="logos__link">
+          <img src="./images/client-maker.svg" alt="Maker logo" class="logos__image">
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer page__footer">
+    <div class="footer__attribution footer__attribution_blue_text">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="footer__link">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/h0ldemslav" target="_blank" class="footer__link">h0ldemslav</a>.
+    </div>
+  </footer>
+</body>
+</html>
