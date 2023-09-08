@@ -1,0 +1,26 @@
+$breakpoints: (
+    // 576px
+    sm: 36em,
+    
+    // 768px
+    md: 48em,
+    
+    // 992px
+    lg: 62em,
+    
+    // 1200px
+    xl: 75em,
+
+    // 1400px
+    xxl: 87.5em
+);
+
+@mixin breakpoint-up($size) {
+    @if not map-has-key($breakpoints, $size) {
+        @error "Mixin 'breakpoint-up' error: invalid passed argument";
+    }
+
+    @media screen and (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}

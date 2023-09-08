@@ -1,0 +1,25 @@
+@use "../utils";
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font: 18px/1.5 utils.$barlow;
+    max-width: 1440px;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: utils.$barlow-condensed;
+}
+
+button {
+    font-family: utils.$barlow-condensed;
+    font-weight: 700;
+    font-size: 100%;
+}

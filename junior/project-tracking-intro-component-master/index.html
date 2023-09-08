@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | Project tracking intro component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./dist/styles.css">
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./images/logo.svg" alt="Logo" class="header__logo">
+      
+      <nav class="burger-menu">
+        <button type="button" class="burger-menu__button">
+          <img src="./images/icon-hamburger.svg" alt="Menu" class="burger-menu__icon">
+        </button>
+
+        <ul class="burger-menu__list burger-menu__list_hidden">
+          <li class="burger-menu__item">
+            <a href="#" class="burger-menu__link">Product</a>
+          </li>
+          <li class="burger-menu__item">
+            <a href="#" class="burger-menu__link">Features</a>
+          </li>
+          <li class="burger-menu__item">
+            <a href="#" class="burger-menu__link">Pricing</a>
+          </li>
+          <li class="burger-menu__item burger-menu__item_gray">
+            <a href="#" class="burger-menu__link">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content">
+      <div class="content__chip-group">
+        <span class="content__chip content__chip_darkblue">New</span>
+        <span class="content__chip-desc">Monograph Dashboard</span>
+      </div>
+
+      <section class="product-desc content__product-desc">
+        <h2 class="product-desc__title product-desc__title_darkblue">Powerful insights into your team</h2>
+
+        <p class="product-desc__text">Project planning and time tracking for agile teams</p>
+        
+        <button type="button" class="product-desc__button product-desc__button_red">Schedule a demo</button>
+        
+        <span class="product-desc__button-hint">to see a preview</span>
+      </section>
+    </main>
+    
+    <footer class="footer">
+      <p class="footer__attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="footer__link">
+        Frontend Mentor</a>. Coded by <a href="https://github.com/h0ldemslav" target="_blank" class="footer__link">h0ldemslav</a>.
+      </p>
+    </footer>
+  </body>
+</html>

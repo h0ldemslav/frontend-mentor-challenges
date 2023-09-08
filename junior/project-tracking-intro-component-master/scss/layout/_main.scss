@@ -1,0 +1,356 @@
+@use "../utils/" as utils;
+
+.header {
+    background-image: linear-gradient(to right, utils.$white 50%, utils.$light-grayish-blue 50%);
+    width: 100vw;
+    max-width: inherit;
+    padding-top: 1rem;
+    position: fixed;
+    top: 0;
+    // Needs to overlap .content's relative position
+    z-index: 1;
+
+    &__logo {
+        width: 25px;
+        height: 25px;
+        margin-left: 2rem;
+
+        @include utils.breakpoint-up(lg) {
+            margin-left: 0;
+            margin-top: 3rem;
+        }
+    }
+
+    @include utils.breakpoint-up(sm) {
+        width: 80vw;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    @include utils.breakpoint-up(md) {
+        width: 70vw;
+    }
+
+    @include utils.breakpoint-up(lg) {
+        width: 100%;
+        padding: 0 0 0 5rem;
+    }
+
+    @include utils.breakpoint-up(xl) {
+        padding-left: 10rem;
+        left: auto;
+        right: auto;
+    }
+}
+
+.burger-menu {
+    float: right;
+
+    &__button {
+        background-color: utils.$transparent-black;
+        border-width: 0;
+        margin-right: 2rem;
+        cursor: pointer;
+
+        @include utils.breakpoint-up(lg) {
+            display: none;
+        }
+    }
+
+    &__list {
+        font-family: utils.$barlow-condensed;
+        font-weight: 700;
+        list-style-type: none;
+        text-align: center;
+        background-color: utils.$light-grayish-blue;
+        box-shadow: 0 0px 5px 0.5px;
+        position: fixed;
+        top: 10vh;
+        left: 0;
+        right: 0;
+        width: 82vw;
+        padding: 1rem 0 0 0;
+        border-radius: 4px;
+        margin: auto;
+
+        animation-name: opacityChange;
+        animation-duration: 0.3s;
+
+        @keyframes opacityChange {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        &_hidden {
+            display: none;
+
+            @include utils.breakpoint-up(lg) {
+                display: flex;
+            }
+        }
+    
+        @include utils.breakpoint-up(sm) {
+            width: 60vw;
+        }
+    
+        @include utils.breakpoint-up(md) {
+            width: 45vw;
+        }
+    
+        @include utils.breakpoint-up(lg) {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background: none;
+            box-shadow: none;
+            position: static;
+            padding-left: 0;
+            padding-top: 3rem;
+            margin: 0;
+            // 'removes' animation
+            animation-duration: 0s;
+        }
+    
+        @include utils.breakpoint-up(xl) {
+            width: 100%;
+            padding-left: 5rem;
+            gap: 30px;
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+
+        @include utils.breakpoint-up(lg) {
+            flex: 1;
+        }
+
+        &_gray {
+            color: utils.$grayish-blue;
+            width: 80%;
+            padding: 1rem 0;
+            border-top: 1px solid utils.$grayish-blue;
+            margin: 0 auto;
+
+            @include utils.breakpoint-up(lg) {
+                flex: 2;
+                width: auto;
+                padding: 0;
+                border-top-width: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    &__link {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+    }
+
+    @include utils.breakpoint-up(xl) {
+        width: 59%;
+    }
+}
+
+.content {
+    background-image: utils.$illustration-devices;
+    background-size: 450px 210px;
+    background-position: 10px 90px;
+    background-repeat: no-repeat;
+    position: relative;
+    max-width: inherit;
+    padding: 23rem 2rem 0 2rem;
+
+    // Shape with bottom left rounded corner behind the bg image (achieved with ChatGPT help)
+    &::before {
+        content: "";
+        background-color: utils.$light-grayish-blue;
+        width: 50%;
+        height: 55%;
+        border-bottom-left-radius: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    &__chip {
+
+        &_darkblue {
+            color: utils.$light-grayish-blue;
+            font-size: 0.9rem;
+            font-family: utils.$barlow-condensed;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background-color: utils.$very-darkblue;
+            border-radius: 16px;
+            padding: 0.1rem 0.6rem 0.2rem 0.6rem;
+            margin-right: 0.65rem;
+        }
+    }
+
+    &__chip-desc {
+        font-size: 0.9rem;
+        color: utils.$grayish-blue;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    
+        @include utils.breakpoint-up(lg) {
+            font-size: 0.8rem;
+        }
+    }
+
+    @include utils.breakpoint-up(sm) {
+        background-position: center 90px;
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    @include utils.breakpoint-up(md) {
+        width: 70vw;
+    }
+
+    @include utils.breakpoint-up(lg) {
+        background-size: 700px 350px;
+        background-position: 50vw 165px;
+        width: 100%;
+        height: 590px;
+        padding: 12rem 5rem 0 5rem;
+    }
+
+    @include utils.breakpoint-up(xl) {
+        &::before {
+            width: 50%;
+        }
+
+        background-size: 835px;
+        background-position: 50vw 155px;
+        padding-left: 10rem;
+    }
+
+    @include utils.breakpoint-up(xxl) {
+        // vw unit grows each time the viewport size increases (even though max-width: 100%), so instead the pixel value
+        background-position: 725px 155px;
+    }
+}
+
+.product-desc {
+    &__title {
+        font-size: 2.4rem;
+        line-height: 1;
+        color: utils.$very-darkblue;
+        text-transform: uppercase;
+        width: 76vw;
+        margin: 0.8rem 0 0 0;
+
+        @include utils.breakpoint-up(sm) {
+            width: 56vw;
+        }
+
+        @include utils.breakpoint-up(md) {
+            width: 43vw;
+        }
+
+        @include utils.breakpoint-up(lg) {
+            font-size: 2.9rem;
+            width: 35vw;
+            margin-top: 1rem;
+        }
+
+        @include utils.breakpoint-up(xl) {
+            width: 80%;
+        }
+    }
+    
+    &__text {
+        line-height: 1.4;
+        color: utils.$dark-grayish-blue;
+        width: 90%;
+        margin-bottom: 1.5rem;
+
+        @include utils.breakpoint-up(lg) {
+            width: 33%;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @include utils.breakpoint-up(xl) {
+            width: 60%;
+        }
+    }
+
+    &__button {
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: utils.$light-grayish-blue;
+        text-transform: uppercase;
+        background-color: utils.$red;
+        padding: 0.65rem 1.5rem;
+        border-width: 0;
+        border-radius: 4px;
+        margin-right: 0.8rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: utils.$red-on-hover;
+        }
+
+        @include utils.breakpoint-up(lg) {
+            font-size: 1rem;
+        }
+    }
+
+    &__button-hint {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        color: utils.$grayish-blue;
+        text-transform: uppercase;
+
+        @include utils.breakpoint-up(lg) {
+            font-size: 0.9rem;
+        }
+    }
+
+    @include utils.breakpoint-up(xl) {
+        width: 50%;
+    }
+}
+
+.footer {
+    padding-left: 2rem;
+    max-width: inherit;
+    margin-top: 3rem;
+
+    &__attribution { 
+        font-size: 0.8em; 
+    }
+    
+    &__link {
+        color: utils.$footer-link-color 
+    }
+
+    @include utils.breakpoint-up(sm) {
+        text-align: center;
+        width: 80vw;
+        margin: 3rem auto 0 auto;
+    }
+
+    @include utils.breakpoint-up(lg) {
+        margin-top: 0;
+    }
+}
