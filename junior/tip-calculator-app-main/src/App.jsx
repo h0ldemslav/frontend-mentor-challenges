@@ -56,7 +56,7 @@ function TipCardInput({
     <div className="tip-card__input-wrapper">
       {label && <label className="tip-card__input-label">{label}</label>}
       {error && <span className="tip-card__input-error">{error}</span>}
-      {leadingIcon && <img className="tip-card__input-leading-icon" src={leadingIcon} />}
+      {leadingIcon && <img className="tip-card__input-leading-icon" src={leadingIcon} alt="" />}
       <input
         className="tip-card__input"
         type="number"
