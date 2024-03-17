@@ -1,0 +1,69 @@
+@media (hover: hover) {
+    .select-tip__percent-button--hovered:hover {
+        background-color: hsl(185, 41%, 84%);
+        color: hsl(183, 100%, 15%);
+    }
+
+    .tip-summary__reset-button--hovered:hover {
+        background-color: hsl(185, 41%, 84%);
+    }      
+}
+
+/* 576px */
+@media (min-width: 36em) {
+    .main__tip-card {
+        padding: 1rem 4rem;
+    }
+
+    .tip-card__input-leading-icon {
+        left: 4%;
+    }
+}
+
+/* 768px */
+@media (min-width: 48em) {
+    .main__tip-card {
+        padding: 1rem 8rem;
+    }
+}
+
+/* 992px */
+@media (min-width: 62em) {
+    body {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .main__tip-card {
+        display: flex;
+        gap: 2rem;
+        padding: 1.5rem 2rem 2rem 2rem;
+    }
+
+    .select-tip__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tip-card__form {
+        flex: 1.3;
+    }
+
+    .tip-card__input {
+        padding-right: 0.65rem;
+    }
+
+    .tip-card__tip-summary {
+        flex: 1;
+        margin: 0;
+        padding: 2rem;
+    }
+
+    .tip-summary__reset-button {
+        position: relative;
+        top: 26%;
+    }
+
+    .tip-summary__tip-wrapper {
+        margin-bottom: 2rem;
+    }
+}

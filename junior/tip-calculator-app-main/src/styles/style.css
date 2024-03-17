@@ -1,0 +1,169 @@
+/* Base */
+
+html {
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0;
+    background-color: hsl(185, 41%, 84%);
+}
+
+.main {
+    margin-top: 2rem;
+}
+
+.logo { 
+    display: block;
+    margin: 2rem auto;
+}
+
+.attribution {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* Tip card */
+
+.main__tip-card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 16px;
+    padding: 1rem 2rem;
+}
+
+.tip-card__input-wrapper {
+    position: relative;
+}
+
+.tip-card__input-label {
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: hsl(186, 14%, 43%);
+}
+
+.tip-card__input-leading-icon {
+    position: absolute;
+    top: calc(100% - 1.8rem);
+    left: 6%;
+}
+
+.tip-card__input {
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    padding-right: 1rem;
+    border-width: 0px;
+    border-radius: 4px;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+.tip-card__input:focus {
+   outline-color: hsl(172, 67%, 45%); 
+}
+
+.tip-card__input-error {
+    float: right;
+    margin: 0.5rem 0;
+    color: red;
+}
+
+.select-tip__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.select-tip__percent-button {
+    height: 2.5rem;
+    border-width: 0;
+    border-radius: 4px;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.select-tip__percent-button--selected {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.select-tip__label {
+   margin: 2rem 0 1rem 0;
+}
+
+.select-tip__label--gray {
+   color: hsl(186, 14%, 43%);
+}
+
+.tip-card__tip-summary {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.tip-summary__tip-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tip-summary__label--white {
+    color: hsl(0, 0%, 100%);
+}
+
+.tip-summary__small--gray {
+    color: hsl(186, 14%, 43%);
+}
+
+.tip-summary__tip {
+    font-size: 2rem;
+    text-align: end;
+}
+
+.tip-summary__tip--dark-cyan {
+    color: hsl(172, 67%, 45%);
+}
+
+.tip-summary__dollar-icon {
+    font-size: 1.5rem;
+    position: relative;
+    right: 0.15rem;
+    bottom: 0.15rem;
+}
+
+.tip-summary__reset-button {
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    border-width: 0;
+    border-radius: 4px;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.tip-summary__reset-button--disabled {
+    background-color: hsl(186, 14%, 43%);
+}
