@@ -1,8 +1,10 @@
 /* || General Styles */
 
 :root {
+    --primary-green-400: hsl(171, 66%, 50%);
     --primary-green-500: hsl(171, 66%, 44%);
     --primary-green-600: hsl(171, 66%, 36%);
+    --primary-blue: hsl(233, 100%, 75%);
     --primary-blue-100: hsl(233, 100%, 69%);
     --primary-blue-200: hsl(233, 100%, 61%);
     --neutral-gray-700: hsl(210, 10%, 33%);
@@ -87,7 +89,7 @@ p {
 /* || Main */
 
 .main > * + * {
-    margin-top: 5rem;
+    margin-block-start: 5rem;
 }
 
 /* || Section */
@@ -115,7 +117,7 @@ p {
 
 .section__image {
     max-width: 100%;
-    margin-top: 3.5rem;
+    margin-block-start: 3.5rem;
 }
 
 .section__footer {
@@ -136,9 +138,17 @@ p {
     box-shadow: 0 2px var(--primary-green-600);
 }
 
+.section__action-button:hover {
+    background-color: var(--primary-green-400);
+}
+
 .section__action-button--blue {
     background-color: var(--primary-blue-100);
     box-shadow: 0 2px var(--primary-blue-200);
+}
+
+.section__action-button--blue:hover {
+    background-color: var(--primary-blue);
 }
 
 /* || Container */
@@ -180,7 +190,7 @@ p {
 .features-list {
     list-style-type: none;
     padding: 0 3rem;
-    margin-top: 3.5rem;
+    margin-block-start: 3.5rem;
 }
 
 .features__item {
@@ -242,12 +252,22 @@ p {
     text-decoration: none;
 }
 
+.footer__link:hover {
+    color: var(--primary-green-500);
+}
+
 .socials {
     padding-inline-start: 0;
     list-style-type: none;
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+
+.socials__image:hover {
+    /* https://stackoverflow.com/questions/22252472/how-can-i-change-the-color-of-an-svg-element */
+    filter: invert(59%) sepia(65%) saturate(453%) hue-rotate(120deg)
+        brightness(90%) contrast(93%);
 }
 
 /* || Layout Breakpoints */
@@ -329,7 +349,7 @@ p {
         font-size: 0.75rem;
         text-align: left;
         padding-inline: 2rem 20%;
-        margin-top: 1rem;
+        margin-block-start: 1rem;
     }
 
     .container__heading3 {
