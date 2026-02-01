@@ -7,27 +7,87 @@
   <!-- displays site properly based on user's device -->
   <title>Frontend Mentor | Fylo data storage component</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="body raleway-400 d-flex flex-column row-gap-5 justify-content-center align-items-center">
+  <main class="main container-lg px-sm-5">
+    <div class="row row-cols-1 row-cols-lg-2 gy-3 px-2 align-items-end">
+      <div class="col col-lg-4">
+        <div class="card custom-bg-blue-850 rounded-4 p-4" style="border-top-right-radius: 5rem !important">
+          <div class="card-body">
+            <img src="images/logo.svg" alt="">
+            <section class="d-flex column-gap-3" style="padding-block-start: 2rem">
+              <span class="d-inline-flex justify-content-center align-items-center rounded-3 custom-bg-blue-950"
+                style="padding: 0.75rem 0.85rem;">
+                <img src="images/icon-document.svg" alt="Document your data">
+              </span>
 
-  You’ve used 815 GB of your storage
+              <span class="d-inline-flex justify-content-center align-items-center rounded-3 custom-bg-blue-950"
+                style="padding: 0.75rem 0.85rem;">
+                <img src="images/icon-folder.svg" alt="Folders">
+              </span>
 
-  185 GB Left
+              <span class="d-inline-flex justify-content-center align-items-center rounded-3 custom-bg-blue-950"
+                style="padding: 0.75rem 0.85rem">
+                <img src="images/icon-upload.svg" alt="Upload">
+              </span>
+            </section>
+          </div>
+        </div>
+      </div>
 
-  0 GB
-  1000 GB
+      <div class="col col-lg-8">
+        <div class="card custom-bg-blue-850 custom-text-blue-200 rounded-4 px-4 pt-3 text-center text-lg-start"
+          style="padding-block-end: 2rem;">
+          <div class="card-body">
+            <p class="card-text">You've used <strong>815 GB</strong> of your storage</p>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+            <div class="slider position-relative">
+              <div class="progress rounded-4" role="progressbar" aria-label="Used storage" aria-valuenow="75"
+                aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar w-75 rounded-5 align-items-end blue-950-border">
+                  <span class="bg-white rounded-pill" style="padding: 0.28rem; margin-inline-end: 0.1rem"></span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between pt-2">
+                <b>0 GB</b>
+                <b>1000 GB</b>
+              </div>
+
+              <span class="d-inline-flex justify-content-center align-items-center position-absolute start-50 translate-middle 
+                badge rounded-3 text-bg-light custom-badge" style="padding: 1rem 1.85rem; top: 210%">
+                <span class="pe-2" style="font-size: 2.5rem;">185</span><span
+                  class="custom-text-grayish-blue text-uppercase">GB
+                  Left</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <p class="attribution text-white">
+    Challenge by
+    <a class="link-info" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      class="attribution__link">Frontend
+      Mentor</a>. Coded by
+    <a class="link-info" href="https://github.com/h0ldemslav" class="attribution__link">Daniil Astapenko</a>.
+  </p>
 </body>
 
 </html>
